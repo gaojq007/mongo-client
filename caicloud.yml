@@ -21,7 +21,7 @@ integration:
       image: index.caicloud.io/caicloud/mongo:3.0.5
       command: mongod
       
-  image: index.caicloud.io/golang:1.5.3
+  image: golang:1.5.3
   env:
     - GOPATH=/go
   commands: 
