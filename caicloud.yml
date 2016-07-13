@@ -21,14 +21,14 @@ integration:
       image: mongo:3.0.5
       command: mongod
       
-  image: golang:1.5.3
+  image: golang:1.6
   env:
     - GOPATH=/go
   commands: 
     - ping -c 10 mongo
 
 pre_build:
-  image: index.caicloud.io/caicloud/golang:1.6
+  image: golang:1.6
   volumes:
     - .:/go/src/mongo-client
   commands:
