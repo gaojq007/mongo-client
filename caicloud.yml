@@ -28,7 +28,7 @@ integration:
     - ping -c 10 mongo
 
 pre_build:
-  image: golang:1.5.3
+  image: index.caicloud.io/caicloud/golang:1.6
   volumes:
     - .:/go/src/mongo-client
   commands:
