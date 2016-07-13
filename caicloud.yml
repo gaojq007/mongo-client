@@ -1,3 +1,32 @@
+integration:
+
+  services:
+    mongo:
+      image: index.caicloud.io/caicloud/mongo:3.0.5
+      command: mongod
+    
+    mongo2:
+      image: index.caicloud.io/caicloud/mongo:3.0.5
+      command: mongod
+    
+    mongo3:
+      image: index.caicloud.io/caicloud/mongo:3.0.5
+      command: mongod
+      
+    mongo4:
+      image: index.caicloud.io/caicloud/mongo:3.0.5
+      command: mongod
+      
+    mongo5:
+      image: index.caicloud.io/caicloud/mongo:3.0.5
+      command: mongod
+      
+  image: index.caicloud.io/golang:1.5.3
+  env:
+    - GOPATH=/go
+  commands: 
+    - ping -c 10 mongo
+
 pre_build:
   image: index.caicloud.io/caicloud/golang:1.6
   volumes:
