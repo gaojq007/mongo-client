@@ -1,31 +1,3 @@
-integration:
-
-  services:
-    mongo:
-      image: mongo:3.0.5
-      command: mongod
-    
-    mongo2:
-      image: mongo:3.0.5
-      command: mongod
-    
-    mongo3:
-      image: mongo:3.0.5
-      command: mongod
-      
-    mongo4:
-      image: mongo:3.0.5
-      command: mongod
-      
-    mongo5:
-      image: mongo:3.0.5
-      command: mongod
-      
-  image: golang:1.6
-  env:
-    - GOPATH=/go
-  commands: 
-    - ping -c 10 mongo
 
 pre_build:
   image: golang:1.6
